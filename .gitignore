@@ -1,0 +1,6 @@
+#Eclipse files
+target/
+.DS_Store
+.project
+.settings/
+.classpath
