@@ -18,7 +18,6 @@ public class FooBarQixTest {
 	public void should_return_Foo_when_divisable_by_3()
 	{
 		String result = fooBarQix.compute("9");
-		assertEquals(1, 2);
-		assertThat("Foo", is(result));
+		assertThat(result, is("Foo"));
 	}
 }
