@@ -1,33 +1,29 @@
 package io.wesquad.FooBarQix;
 
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
-
 @RunWith(MockitoJUnitRunner.class)
 public class FooBarQixTest {
-	
+
 	private FooBarQix fooBarQix = new FooBarQix();
-	
+
 	@Test
-	public void should_return_Foo_when_divisable_by_3()
-	{
+	public void should_return_Foo_when_divisable_by_3() {
 		String result = fooBarQix.compute("9");
 		assertThat(result, is("Foo"));
 	}
-	
+
 	@Test
 	public void should_return_Bar_when_divisable_by_5() {
 		String result = fooBarQix.compute("10");
 		assertThat(result, is("Bar"));
 	}
-	
+
 	@Test
 	public void should_return_Bar_when_divisable_by_7() {
 		String result = fooBarQix.compute("14");
@@ -39,7 +35,7 @@ public class FooBarQixTest {
 		String result = fooBarQix.compute("105");
 		assertThat(result, is("FooBarQixBar"));
 	}
-	
+
 	@Test
 	public void should_return_FooFoo_when_having_3() {
 		String result = fooBarQix.compute("3");
@@ -53,30 +49,29 @@ public class FooBarQixTest {
 		assertThat(result, is("BarBar"));
 
 	}
-	
+
 	@Test
 	public void should_return_QixQix_when_having_7() {
 		String result = fooBarQix.compute("7");
 		assertThat(result, is("QixQix"));
 
 	}
-	
+
 	@Test
 	public void should_return_FooBarQixFooBar_when_having_315() {
 		String result = fooBarQix.compute("315");
 		assertThat(result, is("FooBarQixFooBar"));
 	}
-	
+
 	@Test
 	public void should_return_FooBarFooQixBar_when_having_375() {
 		String result = fooBarQix.compute("375");
 		assertThat(result, is("FooBarFooQixBar"));
 	}
-	
+
 	@Test(expected = NumberFormatException.class)
-	public void should_throw_NumberFormatException_when_compute_have_a_nonNumber_param()
-	{
+	public void should_throw_NumberFormatException_when_compute_have_a_nonNumber_param() {
 		fooBarQix.compute("NaN");
 	}
-	
+
 }
