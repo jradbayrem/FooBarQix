@@ -39,6 +39,13 @@ public class FooBarQixTest {
 		String result = fooBarQix.compute("105");
 		assertThat(result, is("FooBarQix"));
 	}
+	
+	@Test
+	public void should_return_FooFoo_when_having_3() {
+		String result = fooBarQix.compute("3");
+		assertThat(result, is("FooFoo"));
+
+	}
 
 	
 }
