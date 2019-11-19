@@ -1,5 +1,6 @@
 package io.wesquad.FooBarQix;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -18,13 +19,13 @@ public class FooBarQixTest {
 	public void should_return_Foo_when_divisable_by_3()
 	{
 		String result = fooBarQix.compute("9");
-		assertThat(result, is("Foo"));
+		assertThat(result, containsString("Foo"));
 	}
 	
 	@Test
 	public void should_return_Bar_when_divisable_by_5() {
 		String result = fooBarQix.compute("10");
-		assertThat(result, is("Bar"));
+		assertThat(result, containsString("Bar"));
 
 	}
 }
