@@ -26,7 +26,6 @@ public class FooBarQixTest {
 	public void should_return_Bar_when_divisable_by_5() {
 		String result = fooBarQix.compute("10");
 		assertThat(result, is("Bar"));
-
 	}
 	
 	@Test
@@ -34,4 +33,12 @@ public class FooBarQixTest {
 		String result = fooBarQix.compute("14");
 		assertThat(result, is("Qix"));
 	}
+
+	@Test
+	public void should_return_FooBarQix_when_having_105() {
+		String result = fooBarQix.compute("105");
+		assertThat(result, is("FooBarQix"));
+	}
+
+	
 }
