@@ -73,4 +73,10 @@ public class FooBarQixTest {
 		assertThat(result, is("FooBarFooQixBar"));
 	}
 	
+	@Test(expected = NumberFormatException.class)
+	public void should_throw_NumberFormatException_when_compute_have_a_nonNumber_param()
+	{
+		fooBarQix.compute("NaN");
+	}
+	
 }
