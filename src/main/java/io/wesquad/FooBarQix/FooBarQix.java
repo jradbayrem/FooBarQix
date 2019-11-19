@@ -18,6 +18,9 @@ public class FooBarQix {
 		if((transformedParam % 5) == 0) {
 			this.result.append( "Bar");
 		}
+		if((transformedParam % 7) == 0) {
+			this.result.append( "Qix");
+		}
 		
 		return this.result.toString();
 	}
