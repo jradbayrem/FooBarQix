@@ -54,4 +54,11 @@ public class FooBarQixTest {
 
 	}
 	
+	@Test
+	public void should_return_QixQix_when_having_7() {
+		String result = fooBarQix.compute("7");
+		assertThat(result, is("QixQix"));
+
+	}
+	
 }
