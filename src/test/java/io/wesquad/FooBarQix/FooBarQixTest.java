@@ -19,13 +19,19 @@ public class FooBarQixTest {
 	public void should_return_Foo_when_divisable_by_3()
 	{
 		String result = fooBarQix.compute("9");
-		assertThat(result, containsString("Foo"));
+		assertThat(result, is("Foo"));
 	}
 	
 	@Test
 	public void should_return_Bar_when_divisable_by_5() {
 		String result = fooBarQix.compute("10");
-		assertThat(result, containsString("Bar"));
+		assertThat(result, is("Bar"));
 
+	}
+	
+	@Test
+	public void should_return_Bar_when_divisable_by_7() {
+		String result = fooBarQix.compute("14");
+		assertThat(result, is("Qix"));
 	}
 }
