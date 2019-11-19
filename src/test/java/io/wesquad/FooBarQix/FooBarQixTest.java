@@ -37,7 +37,7 @@ public class FooBarQixTest {
 	@Test
 	public void should_return_FooBarQix_when_having_105() {
 		String result = fooBarQix.compute("105");
-		assertThat(result, is("FooBarQix"));
+		assertThat(result, is("FooBarQixBar"));
 	}
 	
 	@Test
