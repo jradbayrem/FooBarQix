@@ -47,5 +47,11 @@ public class FooBarQixTest {
 
 	}
 
+	@Test
+	public void should_return_BarBar_when_having_5() {
+		String result = fooBarQix.compute("5");
+		assertThat(result, is("BarBar"));
+
+	}
 	
 }
