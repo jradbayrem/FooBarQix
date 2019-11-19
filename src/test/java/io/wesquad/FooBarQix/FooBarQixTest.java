@@ -69,7 +69,7 @@ public class FooBarQixTest {
 	
 	@Test
 	public void should_return_FooBarFooQixFoo_when_having_375() {
-		String result = fooBarQix.compute("315");
+		String result = fooBarQix.compute("375");
 		assertThat(result, is("FooBarFooQixFoo"));
 	}
 	
