@@ -21,7 +21,10 @@ public class FooBarQix {
 		if ((transformedParam % 7) == 0) {
 			this.result.append("Qix");
 		}
+		
 		paramToAnalyse.chars().filter(candidate -> candidate == '3').forEach(element -> this.result.append("Foo"));
+
+		paramToAnalyse.chars().filter(candidate -> candidate == '5').forEach(element -> this.result.append("Bar"));
 
 		return this.result.toString();
 	}
