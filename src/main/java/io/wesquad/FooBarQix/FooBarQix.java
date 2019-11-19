@@ -21,12 +21,18 @@ public class FooBarQix {
 		if ((transformedParam % 7) == 0) {
 			this.result.append("Qix");
 		}
-		
-		paramToAnalyse.chars().filter(candidate -> candidate == '3').forEach(element -> this.result.append("Foo"));
 
-		paramToAnalyse.chars().filter(candidate -> candidate == '5').forEach(element -> this.result.append("Bar"));
+		paramToAnalyse.chars().mapToObj(subject -> (char) subject)
+				.filter(candidate -> (candidate == '3' || candidate == '5' || candidate == '7')).forEach(element -> {
+					if (element == '3') {
+						this.result.append("Foo");
+					} else if (element == '5') {
+						this.result.append("Bar");
+					} else if (element == '7') {
+						this.result.append("Qix");
+					}
+				});
 
-		paramToAnalyse.chars().filter(candidate -> candidate == '7').forEach(element -> this.result.append("Qix"));
 		return this.result.toString();
 	}
 
