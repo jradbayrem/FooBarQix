@@ -20,4 +20,11 @@ public class FooBarQixTest {
 		String result = fooBarQix.compute("9");
 		assertThat(result, is("Foo"));
 	}
+	
+	@Test
+	public void should_return_Bar_when_divisable_by_5() {
+		String result = fooBarQix.compute("10");
+		assertThat(result, is("Bar"));
+
+	}
 }
