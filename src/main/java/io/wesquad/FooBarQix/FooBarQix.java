@@ -26,6 +26,7 @@ public class FooBarQix {
 
 		paramToAnalyse.chars().filter(candidate -> candidate == '5').forEach(element -> this.result.append("Bar"));
 
+		paramToAnalyse.chars().filter(candidate -> candidate == '7').forEach(element -> this.result.append("Qix"));
 		return this.result.toString();
 	}
 
