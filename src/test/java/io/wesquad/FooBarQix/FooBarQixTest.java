@@ -87,4 +87,10 @@ public class FooBarQixTest {
 		String result = fooBarQix.compute("303");
 		assertThat(result, is("FooFoo*Foo"));
 	}
+	
+	@Test
+	public void should_return_FooQixStarStar_when_having_10101(){
+		String result = fooBarQix.compute("10101");
+		assertThat(result, is("FooQix**"));
+	}
 }
