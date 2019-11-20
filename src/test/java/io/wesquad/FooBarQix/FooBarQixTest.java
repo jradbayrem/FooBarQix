@@ -80,4 +80,9 @@ public class FooBarQixTest {
 		assertThat(result, is("4"));		
 	}
 
+	@Test
+	public void should_return_1Star1_when_having_101(){
+		String result = fooBarQix.compute("101");
+		assertThat(result, is("1*1"));
+	}
 }
