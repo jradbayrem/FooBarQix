@@ -73,5 +73,11 @@ public class FooBarQixTest {
 	public void should_throw_NumberFormatException_when_compute_have_a_nonNumber_param() {
 		fooBarQix.compute("NaN");
 	}
+	
+	@Test
+	public void should_return_4_when_having_4() {
+		String result = fooBarQix.compute("4");
+		assertThat(result, is("4"));		
+	}
 
 }
