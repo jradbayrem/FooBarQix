@@ -22,6 +22,9 @@ public class FooBarQix {
 			this.result.append("Qix");
 		}
 
+		if((this.result.length() == 0) && (transformedParam < 10)) {
+			this.result.append(transformedParam);
+		}
 		paramToAnalyse.chars().mapToObj(subject -> (char) subject)
 				.filter(candidate -> (candidate == '3' || candidate == '5' || candidate == '7')).forEach(element -> {
 					if (element == '3') {
