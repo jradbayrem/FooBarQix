@@ -71,7 +71,7 @@ As technologies we will use:
 - Java 8: As a development platform
 - Git: As version management tool
 - Maven: As a building Tool
-- Travis: As a build management Tool [![Build Status](https://travis-ci.org/jradbayrem/FooBarQix.svg?branch=master)](https://travis-ci.org/jradbayrem/FooBarQix)
+- Travis: As a build management Tool 
 ```
 
 # Run
