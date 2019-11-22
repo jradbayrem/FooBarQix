@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/jradbayrem/FooBarQix.svg?branch=master" alt="Build Status" />
+
 # Statement
 
 You should implement a function String compute(String) which implements the following rules.
