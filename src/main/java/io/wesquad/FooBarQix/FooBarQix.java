@@ -16,9 +16,9 @@ public class FooBarQix {
 		Rule foo = new Rule(3, "Foo");
 		Rule bar = new Rule(5, "Bar");
 		Rule qix = new Rule(7, "Qix");
-
-		this.containsLeaf = new ContainsLeaf(foo, bar, qix);
-		this.divideLeaf = new DivideLeaf(foo, bar, qix);
+		Rule[] rules = { foo, bar, qix };
+		this.containsLeaf = new ContainsLeaf(rules);
+		this.divideLeaf = new DivideLeaf(rules);
 		this.computingComposite = new ComputingComposite(divideLeaf, containsLeaf);
 		return this.computingComposite.compute(paramToAnalyse);
 

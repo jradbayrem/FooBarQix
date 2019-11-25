@@ -1,7 +1,5 @@
 package io.wesquad.FooBarQix.leaf;
 
-import java.util.Arrays;
-
 import io.wesquad.FooBarQix.component.IComputingComponent;
 import io.wesquad.FooBarQix.param.Rule;
 
@@ -10,7 +8,7 @@ public class ContainsLeaf implements IComputingComponent {
 	private StringBuilder computingResult;
 	private Rule[] rules;
 
-	public ContainsLeaf(Rule... rules) {
+	public ContainsLeaf(Rule[] rules) {
 		this.rules = rules;
 	}
 

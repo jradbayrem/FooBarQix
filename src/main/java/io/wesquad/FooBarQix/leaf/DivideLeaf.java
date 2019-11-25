@@ -11,7 +11,7 @@ public class DivideLeaf implements IComputingComponent {
 
 	private Rule[] rules;
 
-	public DivideLeaf(Rule... rules) {
+	public DivideLeaf(Rule[] rules) {
 		this.rules = rules;
 	}
 
