@@ -1,32 +1,44 @@
 package io.wesquad.FooBarQix.leaf;
 
+import java.util.Arrays;
+
 import io.wesquad.FooBarQix.component.IComputingComponent;
+import io.wesquad.FooBarQix.param.Rule;
 
 public class ContainsLeaf implements IComputingComponent {
 
 	private StringBuilder computingResult;
-	
+	private Rule[] rules;
+
+	public ContainsLeaf(Rule... rules) {
+		this.rules = rules;
+	}
 
 	@Override
 	public String compute(String paramToAnalyse) {
 		this.computingResult = new StringBuilder();
+		paramToAnalyse.chars().mapToObj(subject -> (char) subject).forEach(candidate -> {
+			for (Rule rule : rules) {
+				if (Character.getNumericValue(candidate) == rule.getNumber()) {
+					this.computingResult.append(rule.getSubstitute());
 
-		paramToAnalyse.chars().mapToObj(subject -> (char) subject)
-				.filter(candidate -> (candidate == '3' || candidate == '5' || candidate == '7' || candidate == '0'))
-				.forEach(element -> {
-					if (element == '3') {
-						this.computingResult.append("Foo");
-					} else if (element == '5') {
-						this.computingResult.append("Bar");
-					} else if (element == '7') {
-						this.computingResult.append("Qix");
-					} else {
-						this.computingResult.append("0");
-					}
-				});
+				} else if (Character.getNumericValue(candidate) == 0) {
+					this.computingResult.append("0");
+					break;
+				}
+			}
 
+		});
 
 		return computingResult.toString();
+	}
+
+	public Rule[] getRules() {
+		return rules;
+	}
+
+	public void setRules(Rule[] rules) {
+		this.rules = rules;
 	}
 
 }
