@@ -1,8 +1,8 @@
-package io.wesquad.FooBarQix.strategy.impl;
+package io.wesquad.FooBarQix.leaf;
 
-import io.wesquad.FooBarQix.strategy.IComputingStrategy;
+import io.wesquad.FooBarQix.component.IComputingComponent;
 
-public class ContainsStrategy implements IComputingStrategy {
+public class ContainsLeaf implements IComputingComponent {
 
 	private StringBuilder computingResult;
 	

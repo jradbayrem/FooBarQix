@@ -1,21 +1,21 @@
 package io.wesquad.FooBarQix;
 
-import io.wesquad.FooBarQix.strategy.impl.ComputingStrategies;
-import io.wesquad.FooBarQix.strategy.impl.ContainsStrategy;
-import io.wesquad.FooBarQix.strategy.impl.DivideStrategy;
+import io.wesquad.FooBarQix.composite.ComputingComposite;
+import io.wesquad.FooBarQix.leaf.ContainsLeaf;
+import io.wesquad.FooBarQix.leaf.DivideLeaf;
 
 public class FooBarQix {
 
-	private ContainsStrategy containsStrategy;
-	private DivideStrategy divideStrategy;
-	private ComputingStrategies computingStrategies;
+	private ContainsLeaf containsLeaf;
+	private DivideLeaf divideLeaf;
+	private ComputingComposite computingComposite;
 
 	public String compute(String paramToAnalyse) {
 
-		this.containsStrategy = new ContainsStrategy();
-		this.divideStrategy = new DivideStrategy();
-		this.computingStrategies = new ComputingStrategies(divideStrategy, containsStrategy);
-		return this.computingStrategies.compute(paramToAnalyse);
+		this.containsLeaf = new ContainsLeaf();
+		this.divideLeaf = new DivideLeaf();
+		this.computingComposite = new ComputingComposite(divideLeaf, containsLeaf);
+		return this.computingComposite.compute(paramToAnalyse);
 
 	}
 

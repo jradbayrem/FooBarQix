@@ -1,8 +1,8 @@
-package io.wesquad.FooBarQix.strategy.impl;
+package io.wesquad.FooBarQix.leaf;
 
-import io.wesquad.FooBarQix.strategy.IComputingStrategy;
+import io.wesquad.FooBarQix.component.IComputingComponent;
 
-public class DivideStrategy implements IComputingStrategy {
+public class DivideLeaf implements IComputingComponent {
 
 	private StringBuilder computingResult;
 
