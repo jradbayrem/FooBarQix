@@ -76,6 +76,31 @@ As technologies we will use:
 - Travis: As a build management Tool 
 ```
 
+
+## Implementation Reviews
+
+### Review 1
+
+After finishing the Step 2, we made a review and we decided to refactor the code and implement the Strategy Design Pattern by:
+
+- Creating a common Strategy interface that defines a compute method
+
+- Creating a ContainsStrategy and DivideStrategy that implements the common interface and apply the needed filter
+
+- Creating a FooBarQixStrategy that implements the common interface and accept an Array of strategies to execute them
+
+### Review 2
+
+Once finished, we realized that the strategy pattern made our code more complex. And we concluded that it is more oriented to be divided into components rather than strategies. So we implemented the Composite Design Pattern by:
+
+- Creating a base component interface 
+
+- Creating two leaves (Divide and Contains)
+
+- Creating the Computing composite.
+
+
+
 # Run
 
 To run the project you need to open the command line.
